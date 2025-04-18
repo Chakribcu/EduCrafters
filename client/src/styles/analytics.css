@@ -1,0 +1,215 @@
+/* Analytics Dashboard Styles */
+.analytics-charts {
+  width: 100%;
+}
+
+/* Chart Container */
+.chart-container {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 20px;
+  height: 100%;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.chart-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+/* Revenue Chart */
+.revenue-chart {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  height: 200px;
+  padding: 0 10px;
+}
+
+.revenue-bar-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  position: relative;
+}
+
+.revenue-bar {
+  width: 30px;
+  min-height: 4px;
+  border-radius: 4px 4px 0 0;
+  transition: height 0.4s ease;
+}
+
+.revenue-month {
+  font-size: 12px;
+  margin-top: 5px;
+  color: #666;
+}
+
+.revenue-amount {
+  font-size: 12px;
+  font-weight: 500;
+  margin-top: 5px;
+  color: #333;
+}
+
+/* Donut Chart for Student Engagement */
+.donut-chart-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.donut-chart {
+  position: relative;
+  width: 150px;
+  height: 150px;
+}
+
+.donut-segment {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  clip-path: circle(50%);
+  transform: var(--rotation);
+  background: conic-gradient(
+    var(--segment-color) 0% var(--dash-array),
+    transparent var(--dash-array) 100%
+  );
+  transform-origin: center;
+}
+
+.donut-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80px;
+  height: 80px;
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+}
+
+.donut-legend {
+  flex: 1;
+  margin-left: 20px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.legend-color {
+  width: 12px;
+  height: 12px;
+  border-radius: 3px;
+  margin-right: 8px;
+}
+
+.legend-text {
+  font-size: 12px;
+  color: #555;
+}
+
+/* Line Chart for Enrollments */
+.line-chart {
+  height: 200px;
+  padding: 15px 0;
+}
+
+.enrollment-chart {
+  width: 100%;
+  height: 100%;
+}
+
+/* Course Completion Rates Chart */
+.completion-chart {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.completion-item {
+  display: flex;
+  align-items: center;
+}
+
+.course-name {
+  width: 200px;
+  font-size: 14px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-right: 10px;
+}
+
+.completion-bar-container {
+  flex: 1;
+  height: 20px;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.completion-bar {
+  height: 100%;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 10px;
+  color: white;
+  font-size: 12px;
+  font-weight: 500;
+  transition: width 0.4s ease;
+}
+
+/* Course-specific analytics */
+.progress-distribution {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.progress-item {
+  margin-bottom: 5px;
+}
+
+.progress-label {
+  font-size: 14px;
+  margin-bottom: 3px;
+  color: #555;
+}
+
+.enrollment-timeline {
+  height: 200px;
+}
+
+@media (max-width: 768px) {
+  .course-name {
+    width: 100px;
+  }
+  
+  .donut-chart-container {
+    flex-direction: column;
+  }
+  
+  .donut-legend {
+    margin-left: 0;
+    margin-top: 15px;
+  }
+}
